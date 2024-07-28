@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --shimmer-color: #c3d7e9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.logo-container>img {
+  width: 100px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.nav-items>ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-items>ul>li {
+  margin: 10px;
+  list-style: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: aliceblue;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.body {
+  padding: 20px 25px;
+  background-color: aquamarine;
+}
+
+.res-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.res-card {
+  width: 280px;
+  margin: 10px 20px;
+  cursor: pointer;
+  background-color: azure;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.res-card img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.shimmer-container {
+  padding: 20px 25px;
+  display: flex;
+  background-color: aquamarine;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shimmer-card>div {
+  margin: 15px 0;
+}
+
+.shimmer-card {
+  width: 280px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.shimmer-img {
+  width: 100%;
+  background-color: var(--shimmer-color);
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.shimmer-title {
+  width: 60%;
+  height: 20px;
+  background-color: var(--shimmer-color);
+}
+
+.shimmer-subtitle {
+  width: 40%;
+  height: 20px;
+  background-color: var(--shimmer-color);
+}
+
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.filter button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.res-rating {
+  background-color: aquamarine;
+  width: fit-content;
+  padding: 5px 8px;
+}
+
+.res-card>h5 {
+  margin: 15px 0;
+}
+
+.seacr-bar {
+  margin: 0 20px;
+}
+
+.seacr-bar>input {
+  text-decoration: none;
+  border: none;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.seacr-bar>button {
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+}
+
+.menu h1 {
+  background-color: aliceblue;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+}
+
+.menu p {
+  background-color: #feffbc;
+  color: black;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.menu h2 {
+  margin: 20px 0;
+}
+
+.menu ul {
+  color: black;
+  width: 50%;
+}
+
+.menu>ul>li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: antiquewhite;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.menu>ul>li .price {
+  color: #0e26ff;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-header {
+  background-color: #04AA6D;
+  color: white;
+  width: 100%;
+  padding: 80px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-us-content {
+  text-align: center;
+  padding: 40px 20px;
+  width: 70%;
+}
+
+.our-team {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #def0ff;
+  justify-content: space-around;
+}
+
+.user-info-card {
+  width: 280px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c3d7e9;
+  border-radius: 20px;
+}
+
+.user-info-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.user-info {
+  background-color: #feffbc3b;
+  padding: 10px 5px;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 10px;
+}
