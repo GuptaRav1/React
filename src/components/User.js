@@ -12,7 +12,6 @@ const User = () => {
         const data = await fetch('https://randomuser.me/api/')
         const json = await data.json()
         setUser(json.results[0])
-        console.log(json.results[0])
     }
 
     if (user === null) {
