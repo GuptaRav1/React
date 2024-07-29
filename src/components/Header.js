@@ -6,19 +6,39 @@ const Header = () => {
     const [loginBtn, setLoginBtn] = useState('Login')
     const online = useOnlineStatus()
     return (
-        <div className='header'>
-            <div className='logo-container'>
-                <img alt='logo' src={require('../assets/logo.png')} />
+        <div className='flex shadow-lg justify-between items-center bg-amber-400 py-4 px-8'>
+            <div className='w-28 rounded-xl overflow-hidden'>
+                <img alt='' src={require('../assets/logo.png')} />
             </div>
-            <div className='nav-items'>
-                <ul>
-                    <li>Online: {online ? '🟢' : '🔴'}</li>
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/grocery'}>Grocery</Link></li>
-                    <li><Link to={'/about'}>About</Link></li>
-                    <li><Link to={'/contact'}>Contact</Link></li>
-                    <li>Cart</li>
-                    <li className='login' onClick={() => { setLoginBtn('Logout') }}>{loginBtn}</li>
+            <div>
+                <ul className='flex justify-betwee'>
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'>
+                        Online: {online ? '🟢' : '🔴'}
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/grocery'}>
+                        Grocery</Link>
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/'}>
+                        Home</Link>
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/about'}>
+                        About</Link>
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/contact'}>
+                        Contact</Link>
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'>
+                        Cart
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg' onClick={() => { setLoginBtn('Logout') }}>
+                        {loginBtn}
+                    </li>
                 </ul>
             </div>
         </div>

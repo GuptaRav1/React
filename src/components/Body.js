@@ -16,14 +16,14 @@ const Body = () => {
     }
 
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
-        <div className='body'>
-            <div className='filter'>
+        <div className='px-8'>
+            <div className='flex py-9 justify-between'>
                 <div className="seacr-bar">
-                    <input type="text" placeholder="Seach Here..." value={searchText} onChange={(e) => {
+                    <input className="px-2 border-solid border-2 border-green-700 py-2 w-60 rounded-lg mr-4" type="text" placeholder="Seach Here..." value={searchText} onChange={(e) => {
                         setSearchText(e.target.value)
                     }}>
                     </input>
-                    <button className="search-btn" onClick={() => {
+                    <button className="px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg" onClick={() => {
                         newFilterredList = listOfRestaurants.
                             filter((res) => {
                                 return res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -31,12 +31,13 @@ const Body = () => {
                         setFilterredListOfRestaurants(newFilterredList)
                     }}>search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
+                <button className="px-4 py-2 cursor-pointer bg-green-700 text-white rounded-lg" onClick={() => {
                     const newFilterredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.3)
                     setFilterredListOfRestaurants(newFilterredList)
                 }}>Top Rated Restaurants</button>
             </div>
-            <div className='res-container'>
+
+            <div className='res-container flex flex-wrap justify-between'>
                 {
                     filterredListOfRestaurants.map((restaurant) => {
                         return (
