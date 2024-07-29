@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react"
+import useUserData from "../utils/useUserData";
 
 const User = () => {
 
-    const [user, setUser] = useState(null)
-
-    useEffect(() => {
-        fetchUser()
-    }, [])
-
-    const fetchUser = async () => {
-        const data = await fetch('https://randomuser.me/api/')
-        const json = await data.json()
-        setUser(json.results[0])
-    }
+    const user = useUserData()
 
     if (user === null) {
         return <h1>Loading...</h1>
