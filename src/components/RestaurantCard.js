@@ -9,20 +9,22 @@ const RestaurantCard = ({ resData }) => {
         sla,
     } = resData?.info;
 
+    const cuisinesString = cuisines.join(', ')
+
     return (
-        <div class="relative flex flex-col mt-5 text-black bg-amber-400 shadow-md bg-clip-border rounded-xl w-96">
+        <div class="relative flex mb-5 flex-col text-black bg-amber-400 shadow-md bg-clip-border rounded-xl">
             <div
-                class="relative h-64 mx-4 mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                class="relative h-48 mx-4 mt-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
                 <img
                     src={CDN_URL + cloudinaryImageId}
                     alt="card-image" />
             </div>
             <div class="p-6">
                 <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                    {name}
+                    {name.length > 20 ? name.slice(0, 20) + '...' : name}
                 </h5>
                 <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                    {cuisines.join(', ')}
+                    {cuisinesString.length > 30 ? cuisinesString.slice(0, 30) + '...' : cuisinesString}
                 </p>
             </div>
             <div class="p-6 pt-0">
@@ -34,6 +36,8 @@ const RestaurantCard = ({ resData }) => {
             </div>
         </div>
     )
+
+
 }
 
 export default RestaurantCard

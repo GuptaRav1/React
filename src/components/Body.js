@@ -11,6 +11,8 @@ const Body = () => {
     const [searchText, setSearchText] = useState('')
     const online = useOnlineStatus()
 
+    console.log(listOfRestaurants)
+
     if (!online) {
         return <h1>You are offline</h1>
     }
@@ -37,7 +39,7 @@ const Body = () => {
                 }}>Top Rated Restaurants</button>
             </div>
 
-            <div className='res-container flex flex-wrap justify-between'>
+            <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {
                     filterredListOfRestaurants.map((restaurant) => {
                         return (
