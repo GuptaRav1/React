@@ -19,11 +19,11 @@ class UserClass extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log('did update')
+        // console.log('did update')
     }
 
     componentWillUnmount() {
-        console.log('will unmount')
+        // console.log('will unmount')
 
     }
 
@@ -41,19 +41,6 @@ class UserClass extends React.Component {
                 </div>
             </div>
         )
-
-        // return (
-        //     <div className="user-info-card">
-        //         <img src={picture.large}></img>
-        //         <h2 className="user-name">{name.first + ' ' + name.last}</h2>
-        //         <p className="user-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nunc nec nunc.</p>
-        //         <div className="user-info">
-        //             <p className="user-location">{location.city + ', ' + location.country}</p>
-        //             <p></p>
-        //             <p className="user-email">{email}</p>
-        //         </div>
-        //     </div>
-        // )
     }
 }
 

@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useOnlineStatus from '../utils/useOnlineStatus'
+import UserContext from '../utils/UserContext'
 
 const Header = () => {
     const [loginBtn, setLoginBtn] = useState('Login')
     const online = useOnlineStatus()
+    const { loggedInUser } = useContext(UserContext)
     return (
         <div className='flex shadow-lg justify-between items-center bg-amber-400 py-4 px-8'>
             <div className='w-28 rounded-xl overflow-hidden'>
@@ -38,6 +40,10 @@ const Header = () => {
 
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg' onClick={() => { setLoginBtn('Logout') }}>
                         {loginBtn}
+                    </li>
+
+                    <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg font-bold'>
+                        {loggedInUser}
                     </li>
                 </ul>
             </div>
