@@ -21,7 +21,7 @@ const Header = () => {
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/'}>Home</Link></li>
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/about'}>About</Link></li>
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/contact'}>Contact</Link></li>
-                    <li className='font-bold px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'>Cart - ({cartItems.length} items)</li>
+                    <li className='font-bold px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg'><Link to={'/cart'}>Cart - ({cartItems.length} items)</Link></li>
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg' onClick={() => { setLoginBtn('Logout') }}>{loginBtn}</li>
                     <li className='px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg font-bold'>{loggedInUser}</li>
                 </ul>
