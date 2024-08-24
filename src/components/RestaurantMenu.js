@@ -20,9 +20,9 @@ const RestaurantMenu = () => {
 
     return (
         <div className="">
-            <h1 class="bg-green-700 text-center pt-28 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">{name}</h1>
-            <p class=" bg-green-700 pt-3 pb-28 text-center text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-200">{cuisines.join(', ') + ' - ' + costForTwoMessage}</p>
-            <h2 className="text-center text-2xl font-bold py-6">Menu Items</h2>
+            <h1 className="text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 bg-green-700 pt-28 md:text-5xl lg:text-6xl dark:text-white">{name}</h1>
+            <p className="pt-3 text-lg font-normal text-center text-white bg-green-700 pb-28 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-200">{cuisines.join(', ') + ' - ' + costForTwoMessage}</p>
+            <h2 className="py-6 text-2xl font-bold text-center">Menu Items</h2>
             {
                 itemCategories
                     .map(

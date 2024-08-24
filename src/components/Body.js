@@ -20,12 +20,12 @@ const Body = () => {
 
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className='px-8'>
-            <div className='flex py-9 justify-between'>
+            <div className='flex justify-between py-9'>
                 <div>
-                    <input className="px-2 border-solid border-2 border-green-700 py-2 w-60 rounded-lg mr-4" type="text" placeholder="Seach Here..." value={searchText} onChange={e => setSearchText(e.target.value)} />
-                    <button className="px-4 py-2 cursor-pointer mr-2 bg-green-700 text-white rounded-lg"
+                    <input className="px-2 py-2 mr-4 border-2 border-green-700 border-solid rounded-lg w-60" data-testid='searchInput' type="text" placeholder="Seach Here..." value={searchText} onChange={e => setSearchText(e.target.value)} />
+                    <button className="px-4 py-2 mr-2 text-white bg-green-700 rounded-lg cursor-pointer"
                         onClick={() => {
-                            newFilterredList = listOfRestaurants.
+                            const newFilterredList = listOfRestaurants.
                                 filter(res => res.info.name.toLowerCase().includes(searchText.toLowerCase()))
 
                             setFilterredListOfRestaurants(newFilterredList)
@@ -36,16 +36,16 @@ const Body = () => {
                 <div>
                     <label>
                         User Name:
-                        <input className="px-2 mx-2 border-solid border-2 border-green-700 py-2 w-60 rounded-lg mr-4" value={loggedInUser} type="text" placeholder="Enter User Name" onChange={(e) => { setUserName(e.target.value) }} />
+                        <input className="px-2 py-2 mx-2 mr-4 border-2 border-green-700 border-solid rounded-lg w-60" value={loggedInUser} type="text" placeholder="Enter User Name" onChange={(e) => { setUserName(e.target.value) }} />
                     </label>
                 </div>
-                <button className="px-4 py-2 cursor-pointer bg-green-700 text-white rounded-lg" onClick={() => {
+                <button className="px-4 py-2 text-white bg-green-700 rounded-lg cursor-pointer" onClick={() => {
                     const newFilterredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.3)
                     setFilterredListOfRestaurants(newFilterredList)
                 }}>Top Rated Restaurants</button>
             </div>
 
-            <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 gap-5 res-container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {
                     filterredListOfRestaurants.map((restaurant) => {
                         return (

@@ -11,7 +11,7 @@ const RestaurantCard = ({ resData }) => {
     const cuisinesString = cuisines.join(', ')
 
     return (
-        <div className="relative flex mb-5 flex-col text-black bg-amber-400 shadow-md bg-clip-border rounded-xl">
+        <div data-testid='resCard' className="relative flex flex-col mb-5 text-black shadow-md bg-amber-400 bg-clip-border rounded-xl">
             <div className="relative h-48 mx-4 mt-4 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
                 <img src={CDN_URL + cloudinaryImageId} alt="card-image" />
             </div>
@@ -36,7 +36,7 @@ export const withHighDeliveryTime = (RestaurantCard) => {
     return (props) => {
         return (
             <div>
-                <label className='absolute bg-red-700 text-white p-2 rounded-lg z-10 m-1'>High Delivery Time</label>
+                <label className='absolute z-10 p-2 m-1 text-white bg-red-700 rounded-lg'>High Delivery Time</label>
                 <RestaurantCard {...props} />
             </div>
         )
